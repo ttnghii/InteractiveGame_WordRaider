@@ -64,7 +64,7 @@ while total_turns < max_turns:
     # Check the player's result
     ## If the player are the winner
     if guess == word_to_guess:
-        print('🥇'*10, 'CONGRATULATIONS! YOU ARE THE WINNER, WEAR THE 👑', '🥇'*10)
+        print('🥇'*10, 'CONGRATULATIONS! YOU ARE THE WINNER, WEAR YOUR CROWN 👑', '🥇'*10)
         break
 
     ## If the player has lost
