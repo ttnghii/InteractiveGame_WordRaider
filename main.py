@@ -36,24 +36,24 @@ while total_turns < max_turns:
         continue
 
     # Classify the guess word
-    i = 0
-    for c in guess:
+    index = 0
+    for letter in guess:
         # Guess letter is both correct character and position
-        if c == word_to_guess[i]:
-            print(c, end=' ')
-            if c in misplaced_guesses:
-                misplaced_guesses.remove(c)
+        if letter == word_to_guess[index]:
+            print(letter, end=' ')
+            if letter in misplaced_guesses:
+                misplaced_guesses.remove(letter)
         # Guess letter is correct character but places in wrong position
-        elif c in word_to_guess:
-            if c not in misplaced_guesses:
-                misplaced_guesses.append(c)
+        elif letter in word_to_guess:
+            if letter not in misplaced_guesses:
+                misplaced_guesses.append(letter)
             print('_', end=' ')
         # Guess letter is wrong
         else:
-            if c not in incorrect_guesses:
-                incorrect_guesses.append(c)
+            if letter not in incorrect_guesses:
+                incorrect_guesses.append(letter)
             print('_', end=' ')
-        i += 1
+        index += 1
 
     # End of this turn
     print('\n\tMisplaced letters: ', misplaced_guesses)
